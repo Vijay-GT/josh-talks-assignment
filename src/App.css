@@ -1,38 +1,121 @@
-.App {
+body{
+  background-color: antiquewhite;
+}
+.app {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+.task-card {
+  max-width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.task-card h3 {
+  margin-bottom: 10px;
+}
+
+.task-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.task-meta-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priority {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.priority.high {
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.priority.medium {
+  background-color: yellow;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.priority.low {
+  background-color: green;
+  color: white;
+}
+
+.status {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.status.completed {
+  background-color: green;
+  color: white;
+}
+
+.status.in-progress {
+  background-color: gray;
+  color: white;
+}
+
+.task-actions {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-actions button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.task-actions button:hover {
+  background-color: darkblue;
+}
+
+.task-form {
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.task-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.task-form button {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background-color: darkblue;
 }
